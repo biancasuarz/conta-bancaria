@@ -1,23 +1,35 @@
 package conta;
 
+import conta.util.Cores;
+import model.Conta;
+
 import java.util.Scanner;
 
 public class Menu {
 
     public static void main(String[] args) {
 
+        Conta c1 = new Conta(1, 777, "Bianca Soares", 5000.0f);
+        c1.visualizar();
+        c1.sacar(7000.00f);
+        c1.visualizar();
+        c1.depositar(7000.0f);
+        c1.visualizar();
+
         Scanner sc = new Scanner(System.in);
         int opcao;
 
         while(true){
 
-            System.out.println("******************************************************");
+            System.out.println(Cores.TEXT_GREEN
+                    + "******************************************************");
             System.out.println("                                                      ");
             System.out.println("                    BANCO IDEPE                       ");
             System.out.println("                                                      ");
             System.out.println("******************************************************");
             System.out.println("                                                      ");
-            System.out.println("        1- Criar Conta                                ");
+            System.out.println(Cores.TEXT_WHITE_BOLD +
+                    "        1- Criar Conta                                ");
             System.out.println("        2- Listar Todas as Contas                     ");
             System.out.println("        3- Buscar Conta por Número                    ");
             System.out.println("        4- Atualizar Dados da Conta                   ");
@@ -25,11 +37,15 @@ public class Menu {
             System.out.println("        6- Sacar                                      ");
             System.out.println("        7- Depositar                                  ");
             System.out.println("        8- Transferir Valores entre contas            ");
-            System.out.println("        9- Sair                                       ");
+            System.out.println("        9- Sair                                       "
+                    + Cores.TEXT_RESET);
             System.out.println("                                                      ");
-            System.out.println("******************************************************");
-            System.out.println("Entre com a opção desejada:                           ");
-            System.out.println("                                                      ");
+            System.out.println(Cores.TEXT_GREEN +
+                    "******************************************************");
+            System.out.println(Cores.TEXT_WHITE_BOLD +
+                    "Entre com a opção desejada:                           ");
+            System.out.println("                                                      "
+                                + Cores.TEXT_RESET);
 
             opcao = sc.nextInt();
 
@@ -82,6 +98,7 @@ public class Menu {
     public static void sobre() {
         System.out.println("\n*********************************************************");
         System.out.println("Projeto Desenvolvido por: Bianca Soares ");
+        System.out.println("Contato: blancasuarz@gmail.com");
         System.out.println("github.com/biancasuarz");
         System.out.println("*********************************************************");
     }
