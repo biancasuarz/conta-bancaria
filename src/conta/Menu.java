@@ -1,7 +1,9 @@
 package conta;
 
 import conta.util.Cores;
-import model.Conta;
+import conta.model.Conta;
+import conta.model.ContaCorrente;
+import conta.model.ContaPoupanca;
 
 import java.util.Scanner;
 
@@ -9,12 +11,29 @@ public class Menu {
 
     public static void main(String[] args) {
 
+        //Teste  Classe Conta
         Conta c1 = new Conta(1, 777,1, "Bianca Soares", 5000.0f);
         c1.visualizar();
         c1.sacar(7000.00f);
         c1.visualizar();
         c1.depositar(7000.0f);
         c1.visualizar();
+
+        //Teste Classe Conta Corrente
+        ContaCorrente cc1 = new ContaCorrente(7,777,1,"Bianca Soares", 777000.0f);
+        cc1.visualizar();
+        cc1.sacar(0007.0f);
+        cc1.visualizar();
+        cc1.depositar(0007.0f);
+        cc1.visualizar();
+
+        //Teste Classe Poupança
+        ContaPoupanca cp1 = new ContaPoupanca(77,7777,2,"Bianca Soares", 7000000.0f,7);
+        cp1.visualizar();
+        cp1.sacar(0007.0f);
+        cp1.visualizar();
+        cp1.depositar(0007.0f);
+        cp1.visualizar();
 
         Scanner sc = new Scanner(System.in);
         int opcao;
