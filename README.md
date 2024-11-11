@@ -13,6 +13,5 @@ Este projeto implementa um sistema simples de **conta bancária** para o **Banco
 
 ## Tecnologias Utilizadas
 
-- **Java**  <br>
-
+- Java
 
