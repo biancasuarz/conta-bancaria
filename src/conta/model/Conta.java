@@ -16,6 +16,14 @@ public abstract class Conta {
         this.saldo = saldo;
     }
 
+    public int getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(int tipo) {
+        this.tipo = tipo;
+    }
+
     public int getNumero() {
         return numero;
     }
